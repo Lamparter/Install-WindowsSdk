@@ -1,0 +1,18 @@
+name: Install Windows SDK
+description: "A simple action to install the Windows SDK."
+
+branding:
+  icon: 'hard-drive'
+  color: 'gray-dark'
+
+inputs:
+  buildNumber:
+    description: 'The build number of the Windows SDK to install.'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Windows SDK
+      shell: pwsh
+      run: ./scripts/Install-WindowsSdkISO.ps1 ${{ inputs.buildNumber }}
