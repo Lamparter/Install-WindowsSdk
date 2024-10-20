@@ -22,9 +22,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Install Windows SDK
-        uses: Lamparter/Install-WindowsSdk@v1.0.0
+        uses: Lamparter/Install-WindowsSdk@latest
         with:
           buildNumber: '19041'
 ```
